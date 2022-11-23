@@ -28,6 +28,9 @@ app.use('/plaid-link', createProxyMiddleware({
   }
 }));
 
+app.get('/', (req, res) => {
+    res.send('Hello from Node.js!')
+});
 
 app.listen(PORT, HOST, () => {
    console.log(`Starting Proxy at ${HOST}:${PORT}`);
